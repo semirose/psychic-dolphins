@@ -1,0 +1,33 @@
+<head>
+<title>
+Grocery List!
+</title>
+</head>
+<body>
+    <h2>Okay folks, let's make a grocery list!</h2>
+    <ol>
+        <li>
+            Type the item into the text box.
+        </li>
+        <li>
+            Click the 'Add' button
+        </li>
+        <li>
+            Repeat for all items!
+        </li>
+    </ol>
+    <input type="text" id="textbox">
+    <br>
+    <input type="button" id="add" value="Add">
+    <footer></footer>
+<script>
+var list = [];
+document.getElementById('add').onclick = function() {
+    list.push(document.getElementById('textbox').value);
+    document.getElementById('textbox').value = '';
+    console.log(list);
+    text_input.focus();
+};
+
+</script>
+</body>
